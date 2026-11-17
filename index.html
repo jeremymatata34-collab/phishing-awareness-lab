@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Lab</title>
+
+    <style>
+        body {
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-box {
+            background: #202020;
+            padding: 30px;
+            width: 300px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #e1306c;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #e1306c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #message {
+            color: #ffcc66;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h1>Phising Awareness Lab</h1>
+    <p>Educational cybersecurity demonstration</p>
+
+    <form id="demoForm">
+        <input type="text"
+               placeholder="Demo username"
+               autocomplete="off">
+
+        <input type="password"
+               placeholder="Demo password"
+               autocomplete="off">
+
+        <button type="submit">Simulate Login</button>
+    </form>
+
+    <p id="message"></p>
+</div>
+
+<script>
+    document.getElementById("demoForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        document.getElementById("message").innerText =
+        "SIMULATION: Never enter your real credentials on suspicious links!";
+
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
+
